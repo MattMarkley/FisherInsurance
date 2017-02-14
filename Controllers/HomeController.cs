@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using FisherInsurance.Models;
+using System;
 
 
 public class HomeController : Controller 
@@ -10,4 +12,8 @@ public class HomeController : Controller
 
         return View();
     }
+
+
+
+
 }

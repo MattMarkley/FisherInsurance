@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using FisherInsurance.Models;
+using System;
 
 
 public class SecHomeController : Controller 
@@ -13,6 +15,19 @@ public class SecHomeController : Controller
     public IActionResult Quote()
     {
         //return Ok("This is the index of the SecHome/Quote");
-        return View();
+
+        Quote quote = new Quote 
+         {
+            Id = 345,
+
+            Product = "Home Insurance",
+
+            ExpireDate = DateTime.Now.AddDays(45),
+
+            Price = 45.00M
+         };
+
+
+        return View(quote);
     }
 }
